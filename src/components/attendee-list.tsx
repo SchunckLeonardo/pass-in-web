@@ -9,7 +9,7 @@ export function AttendeeList() {
         <h1 className="text-2xl font-bold">Participantes</h1>
         <section className="w-72 px-3 py-1.5 border border-white/10 bg-transparent rounded-lg flex items-center gap-3">
           <Search size={16} className="text-emerald-300" />
-          <input className="bg-transparent h-auto border-0 p-0 text-sm flex-1 outline-none ring-0" type="search" placeholder="Buscar participante..." />
+          <input className="bg-transparent h-auto border-0 p-0 text-sm flex-1 outline-none focus:ring-transparent" type="search" placeholder="Buscar participante..." />
         </section>
       </div>
 

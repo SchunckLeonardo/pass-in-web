@@ -11,7 +11,7 @@ interface TableRowProps {
     name: string
     email: string
     createdAt: Date
-    checkedInAt: Date
+    checkedInAt: Date | null
   }
 }
 
@@ -35,7 +35,7 @@ export function TableRow({ attendee }: TableRowProps) {
         })}
       </TableCell>
       <TableCell>
-        {formatDistanceToNow(attendee.checkedInAt, {
+        {attendee.checkedInAt === null ? <span className="text-zinc-400">Não fez check-in</span> : formatDistanceToNow(attendee.checkedInAt, {
           locale: ptBR,
           addSuffix: true
         })}
